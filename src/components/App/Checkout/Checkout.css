@@ -1,0 +1,15 @@
+.total {
+    margin-top: auto; 
+    padding-top: 1rem;
+    border-top: 1px solid #ccc;
+  }
+
+.checkout {
+    border-style: solid;
+    border-radius: 5%;
+    width: 150px;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
