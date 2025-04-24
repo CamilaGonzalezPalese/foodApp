@@ -34,5 +34,14 @@ export const foods = [
       price: 120,
       stock: 0
     },
+    {
+      id: 'burrito',
+      name: 'Burrito',
+      emoji: '🌯',
+      price: 160,
+      stock: 10
+    },
+    
+    
   ];
   

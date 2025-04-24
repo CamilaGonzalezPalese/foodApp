@@ -2,15 +2,12 @@ import { useState } from 'react'
 import reactLogo from "../../assets/react.svg"
 import viteLogo from '/vite.svg'
 import './App.css'
-import Checkout from '../App/Checkout/Checkout.jsx'
-
+import FoodApp from '../../components/FoodApp/FoodApp';
 function App() {
   return (
     <>
-    <h1>FoodApp</h1>
-      <div id="app">        
-        
-        <Checkout />
+      <div className="App">
+        <FoodApp />
       </div> 
     </>
   )
