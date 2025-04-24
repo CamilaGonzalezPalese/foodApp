@@ -4,30 +4,35 @@ export const foods = [
       name: 'Hamburguesa',
       emoji: '🍔',
       price: 100,
+      stock: 2
     },
     {
       id: 'taco',
       name: 'Taco',
       emoji: '🌮',
       price: 50,
+      stock: 3
     },
     {
       id: 'pancho',
       name: 'Pancho',
       emoji: '🌭',
       price: 40,
+      stock: 0
     },
     {
       id: 'fritas',
       name: 'Papas Fritas',
       emoji: '🍟',
       price: 100,
+      stock: 1
     },
     {
       id: 'ramen',
       name: 'Ramen',
       emoji: '🍜',
       price: 120,
+      stock: 0
     },
   ];
   
