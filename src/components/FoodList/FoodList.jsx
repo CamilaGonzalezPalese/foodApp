@@ -4,11 +4,14 @@ import './FoodList.css';
 
 function FoodList() {
   return (
-    <div className='food-list'>
-      {foods.map((food) => (
-        <FoodItems key={food.id} food={food} />
-      ))}
-    </div>
+    <>
+      <div className='food-list'>
+        {foods.map((food) => (
+          <FoodItems key={food.id} food={food} />
+        ))}
+      </div>
+    </>
+
   );
 }
 
