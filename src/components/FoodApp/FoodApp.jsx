@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './FoodApp.css';
 import Checkout from '../../components/Checkout/Checkout.jsx'
 import FoodList from '../../components/FoodList/FoodList.jsx';
+import { checkoutFoods } from '../Checkout/utils.jsx';
 
 function FoodApp() {
   return (
@@ -11,7 +12,7 @@ function FoodApp() {
       </header>
       <main className="main-content">
         <FoodList />
-        <Checkout />
+        <Checkout items={checkoutFoods} />
       </main>
     </div>
   );
