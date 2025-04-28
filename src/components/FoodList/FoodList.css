@@ -8,9 +8,7 @@
 }
 
 .food-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
   background-color: white;
   position: relative;
   border: 2px solid #333;
@@ -20,17 +18,38 @@
   transition: transform 0.2s;
 }
 
-.food-item:hover {
-  transform: scale(1.05);
-  cursor: pointer;
+.food-stock {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  background-color: #d4edda;
+  width: 24px;
+  height: 24px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20%;
 }
 
-.emoji {
-  font-size: 3rem;
-  display: block;
+.food-stock.out {
+  background-color: #f8d7da; 
+  color: #721c24;
 }
 
 .no-stock {
   opacity: 0.5;
   pointer-events: none;
 }
+
+.food-item:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.emoji {
+  font-size: 5rem;
+  display: block;
+}
+
