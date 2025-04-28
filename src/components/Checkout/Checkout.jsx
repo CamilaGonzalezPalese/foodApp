@@ -1,12 +1,13 @@
 import './Checkout.css'
-import '../../assets/Foods.js'
-
 function Checkout() {
-  
+  const foods = [
+    { title: 'burger', id: 1, cost: 10 },
+    { title: 'fries', id: 2, cost: 5 },
+    { title: 'taco', id: 3, cost: 7 },
+  ];
   const listFoods = foods.map(product =>
     <li key={product.id}>
-
-      {product.emoji} {product.title} {product.cost}
+       {product.title} {product.cost}
     </li>
   );
 
