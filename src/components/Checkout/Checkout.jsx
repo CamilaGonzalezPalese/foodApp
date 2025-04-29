@@ -1,23 +1,20 @@
 import './Checkout.css'
-import '../../assets/Foods.js'
+import {foods} from '../../assets/Foods.js'
 
 function Checkout() {
-  const foods = [
-    { title: 'burger', id: 1, cost: 10 },
-    { title: 'fries', id: 2, cost: 5 },
-    { title: 'taco', id: 3, cost: 7 },
-  ];
-  const listFoods = foods.map(product =>
-    <li key={product.id}>
-      {product.title} {product.cost}
-    </li>
+  const productosEnCarrito = foods.filter(item => item.carrito > 0);
+
+  const listFoods = productosEnCarrito.map(product =>
+    <p key={product.id}>
+      {product.emoji} x {product.carrito}   $ {product.carrito * product.price}
+    </p>
   );
 
   function handleClick() {
     alert('You clicked me!');
   }
-  let sumCost = foods.reduce((sum, item) => sum + item.cost, 0);
-  return (
+  let sumCost = productosEnCarrito.reduce((sum, item) => sum + item.price * item.carrito,0);
+    return (
     <>
       <div className='checkout'>
         <h2>Checkout</h2>
