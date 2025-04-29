@@ -1,4 +1,6 @@
 import './Checkout.css'
+import '../../assets/Foods.js'
+
 function Checkout() {
   const foods = [
     { title: 'burger', id: 1, cost: 10 },
@@ -7,7 +9,7 @@ function Checkout() {
   ];
   const listFoods = foods.map(product =>
     <li key={product.id}>
-       {product.title} {product.cost}
+      {product.title} {product.cost}
     </li>
   );
 
@@ -18,7 +20,7 @@ function Checkout() {
   return (
     <>
       <div className='checkout'>
-        <h2>Cuenta</h2>
+        <h2>Checkout</h2>
         <ul onClick={handleClick}>{listFoods}</ul>
         <h5 className='total'>Total: {sumCost}</h5>
       </div>
