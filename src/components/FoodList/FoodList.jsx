@@ -3,12 +3,17 @@ import FoodItems from './FoodItems';
 import './FoodList.css';
 
 function FoodList() {
+  function handleClick() {
+    alert('You clicked me!');
+  }
+  
   return (
     <>
       <div className='food-list'>
         {foods.map((food) => (
           <FoodItems key={food.id} food={food} />
         ))}
+
       </div>
     </>
 

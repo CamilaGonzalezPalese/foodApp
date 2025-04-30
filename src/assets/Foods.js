@@ -5,7 +5,7 @@ export const foods = [
     emoji: '🍔',
     price: 100,
     stock: 2,
-    carrito: 0
+    carrito: 2
   },
   {
     id: 'taco',
@@ -13,7 +13,7 @@ export const foods = [
     emoji: '🌮',
     price: 50,
     stock: 3,
-    carrito: 0
+    carrito: 3
     },
   {
     id: 'pancho',
@@ -29,7 +29,7 @@ export const foods = [
     emoji: '🍟',
     price: 100,
     stock: 1,
-    carrito: 0
+    carrito: 1
   },
   {
     id: 'ramen',
