@@ -1,7 +1,6 @@
 import './Checkout.css'
-import {foods} from '../../assets/Foods.js'
 
-function Checkout() {
+function Checkout({ foods}) {
   const productosEnCarrito = foods.filter(item => item.carrito > 0);
 
   const listFoods = productosEnCarrito.map(product =>
