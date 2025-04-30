@@ -38,7 +38,7 @@ function App() {
       </header>
       <main className="main-content">
         <FoodList foods={foods}/>
-        <Checkout />
+        <Checkout foods={foods}/>
       </main>
       </div>) : <p> Error</p>}
     </>

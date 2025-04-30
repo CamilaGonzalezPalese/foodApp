@@ -10,6 +10,7 @@ function FoodList({ foods }) {
         {foods.map((food) => (
           <FoodItems key={food.id} food={food} />
         ))}
+
       </div>
     </>
 
