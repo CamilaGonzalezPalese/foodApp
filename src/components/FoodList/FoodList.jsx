@@ -1,8 +1,9 @@
-import { foods } from '/src/assets/Foods.js';
+/* import { foods } from '/src/assets/Foods.js';*/
 import FoodItems from './FoodItems';
 import './FoodList.css';
 
-function FoodList() {
+function FoodList({ foods }) {
+  console.log(foods)
   return (
     <>
       <div className='food-list'>

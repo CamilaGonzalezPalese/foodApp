@@ -1,4 +1,5 @@
 import './Checkout.css'
+
 function Checkout() {
   const foods = [
     { title: 'burger', id: 1, cost: 10 },
