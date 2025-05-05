@@ -1,19 +1,13 @@
-/* import { foods } from '/src/assets/Foods.js';*/
 import FoodItems from './FoodItems';
 import './FoodList.css';
 
-function FoodList({ foods }) {
-  console.log(foods)
+function FoodList({ foods, setFoods }) {
   return (
-    <>
-      <div className='food-list'>
-        {foods.map((food) => (
-          <FoodItems key={food.id} food={food} />
-        ))}
-
-      </div>
-    </>
-
+    <div className='food-list'>
+      {foods.map((food) => (
+        <FoodItems key={food.id} food={food} setFoods={setFoods} />
+      ))}
+    </div>
   );
 }
 

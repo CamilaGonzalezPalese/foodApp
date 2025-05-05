@@ -1,28 +1,50 @@
-import './Checkout.css'
+import './Checkout.css';
 
-function Checkout({ foods}) {
+function Checkout({ foods, setFoods }) {
+  async function handleClick(product) {
+    if (product.carrito > 0) {
+      try {
+        await fetch(`http://localhost:3000/foods/${product.id}`, {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            carrito: product.carrito - 1,
+            stock: product.stock + 1
+          })
+        });
+
+        const response = await fetch("http://localhost:3000/foods");
+        const updatedFoods = await response.json();
+        setFoods(updatedFoods);
+
+      } catch (err) {
+        console.error("Error actualizando el producto:", err);
+      }
+    }
+  }
+
   const productosEnCarrito = foods.filter(item => item.carrito > 0);
 
   const listFoods = productosEnCarrito.map(product =>
-    <p key={product.id}>
-      {product.emoji} x {product.carrito}   $ {product.carrito * product.price}
+    <p key={product.id} onClick={() => handleClick(product)}>
+      {product.emoji} x {product.carrito}   $ {product.carrito * product.price} ❌
     </p>
   );
 
-  function handleClick() {
-    alert('You clicked me!');
-  }
-  let sumCost = productosEnCarrito.reduce((sum, item) => sum + item.price * item.carrito,0);
-    return (
-    <>
-      <div className='checkout'>
-        <h2>Checkout</h2>
-        <ul onClick={handleClick}>{listFoods}</ul>
-        <h5 className='total'>Total: {sumCost}</h5>
-      </div>
-    </>
+  const sumCost = productosEnCarrito.reduce(
+    (sum, item) => sum + item.price * item.carrito,
+    0
+  );
 
-  )
-};
+  return (
+    <div className='checkout'>
+      <h2>Checkout</h2>
+      <div>{listFoods}</div>
+      <h5 className='total'>Total: {sumCost}</h5>
+    </div>
+  );
+}
 
-export default Checkout
+export default Checkout;
