@@ -40,17 +40,14 @@ function App() {
     <>
       {!loading && !error ? (
         <div className="App">
-        <ThemeContext.Provider value={theme}>
-          <header className="header">
-            <h1 className="title">Food app</h1>
-          </header>
-
-          <main className="main-content">
-            <FoodList foods={foods} setFoods={setFoods} />
-            <Checkout foods={foods} setFoods={setFoods} />
-          </main>
-          
-            
+          <ThemeContext.Provider value={theme}>
+            <header className="header">
+              <h1 className="title">Food app</h1>
+            </header>
+            <main className="main-content">
+              <FoodList foods={foods} setFoods={setFoods} />
+              <Checkout foods={foods} setFoods={setFoods} />
+            </main>
           </ThemeContext.Provider>
           <Button onClick={() => {
             setTheme(theme === 'dark' ? 'light' : 'dark');
