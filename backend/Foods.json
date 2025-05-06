@@ -13,8 +13,8 @@
       "name": "Taco",
       "emoji": "🌮",
       "price": 50,
-      "stock": 1,
-      "carrito": 2
+      "stock": 2,
+      "carrito": 1
     },
     {
       "id": "pancho",

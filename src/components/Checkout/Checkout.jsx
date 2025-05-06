@@ -1,3 +1,4 @@
+//Checkout.jsx
 import './Checkout.css';
 import { useTheme } from '../../context/DarkContext.jsx';
 
@@ -42,10 +43,12 @@ function Checkout({ foods, setFoods }) {
   const themeClass = useTheme();
 
   return (
-    <div className={'checkout '+ themeClass}>
-      <h2>Checkout</h2>
-      <div>{listFoods}</div>
-      <h5 className={'total ' + themeClass}>Total: {sumCost}</h5>
+    <div>
+      <div className={'checkout ' + themeClass}>
+        <h2>Checkout</h2>
+        <div>{listFoods}</div>
+        <h5 className={'total ' + themeClass}>Total: {sumCost}</h5>
+      </div>
     </div>
   );
 }

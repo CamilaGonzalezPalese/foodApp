@@ -1,3 +1,4 @@
+/* FoodList.css */
 .food-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -6,6 +7,8 @@
   margin-top: 5rem;
   height: auto;
   border-radius: 10px;
+  border: 2px solid #ecebeb;
+  
 }
 
 .food-item {
@@ -17,7 +20,7 @@
   padding: 1rem;
   min-height: 100px;
   transition: transform 0.2s;
-  
+
 }
 
 .food-stock {
@@ -36,7 +39,7 @@
 }
 
 .food-stock.out {
-  background-color: #f8d7da; 
+  background-color: #f8d7da;
   color: #721c24;
 }
 
@@ -53,15 +56,4 @@
 .emoji {
   font-size: 5rem;
   display: block;
-}
-
-.light {
-  background-color: #ffffff;
-  color: #333;
-}
-
-.dark {
-  background-color: #333;
-  color: #fff;
-  border-color: #d4edda;
 }

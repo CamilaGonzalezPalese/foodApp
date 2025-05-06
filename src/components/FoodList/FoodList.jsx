@@ -1,10 +1,11 @@
+//FoodList.jsx
 import FoodItems from './FoodItems';
 import './FoodList.css';
 import { useTheme } from '../../context/DarkContext.jsx';
 
 
 function FoodList({ foods, setFoods }) {
-const themeClass = useTheme();
+  const themeClass = useTheme();
   return (
     <div className={'food-list ' + themeClass}>
       {foods.map((food) => (
