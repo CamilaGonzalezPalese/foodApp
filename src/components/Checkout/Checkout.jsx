@@ -1,4 +1,5 @@
 import './Checkout.css';
+import { useTheme } from '../../context/DarkContext.jsx';
 
 function Checkout({ foods, setFoods }) {
   async function handleClick(product) {
@@ -38,11 +39,13 @@ function Checkout({ foods, setFoods }) {
     0
   );
 
+  const themeClass = useTheme();
+
   return (
-    <div className='checkout'>
+    <div className={'checkout '+ themeClass}>
       <h2>Checkout</h2>
       <div>{listFoods}</div>
-      <h5 className='total'>Total: {sumCost}</h5>
+      <h5 className={'total ' + themeClass}>Total: {sumCost}</h5>
     </div>
   );
 }

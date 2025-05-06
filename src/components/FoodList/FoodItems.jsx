@@ -1,4 +1,5 @@
 import './FoodList.css';
+import { useTheme } from '../../context/DarkContext.jsx';
 
 function FoodItems({ food, setFoods }) {
   async function handleClick() {
@@ -25,8 +26,9 @@ function FoodItems({ food, setFoods }) {
     }
   }
 
+
   return (
-    <div className={`food-item ${food.stock === 0 ? 'no-stock' : ''}`} onClick={handleClick}>
+    <div className={`food-item ${food.stock === 0 ? 'no-stock' : ''} ` + themeClass} onClick={handleClick}>
       <figure>
         <span className="emoji">{food.emoji}</span>
       </figure>

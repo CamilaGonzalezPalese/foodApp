@@ -11,3 +11,31 @@
   align-items: flex-start; /* Alinea arriba los dos bloques */
   padding: 20px;
 }
+
+.button-light,
+.button-dark {
+  border: 1px solid #777;
+  padding: 5px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.button-dark {
+  background: #222;
+  color: #fff;
+}
+
+.button-light {
+  background: #fff;
+  color: #222;
+}
+
+.light {
+  background-color: #ffffff;
+  color: #333;
+}
+
+.dark {
+  background-color: #333;
+  color: #fff;
+}
