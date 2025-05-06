@@ -1,3 +1,4 @@
+/* FoodList.css */
 .food-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -5,6 +6,9 @@
   padding: 1rem;
   margin-top: 5rem;
   height: auto;
+  border-radius: 10px;
+  border: 2px solid #333;
+  
 }
 
 .food-item {
@@ -16,6 +20,7 @@
   padding: 1rem;
   min-height: 100px;
   transition: transform 0.2s;
+
 }
 
 .food-stock {
@@ -34,7 +39,7 @@
 }
 
 .food-stock.out {
-  background-color: #f8d7da; 
+  background-color: #f8d7da;
   color: #721c24;
 }
 
@@ -52,4 +57,3 @@
   font-size: 5rem;
   display: block;
 }
-

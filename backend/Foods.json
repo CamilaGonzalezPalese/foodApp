@@ -5,17 +5,17 @@
       "name": "Hamburguesa",
       "emoji": "🍔",
       "price": 100,
-      "stock": 2,
-      "carrito": 0
+      "stock": 1,
+      "carrito": 1
     },
     {
       "id": "taco",
       "name": "Taco",
       "emoji": "🌮",
       "price": 50,
-      "stock": 3,
-      "carrito": 0
-      },
+      "stock": 2,
+      "carrito": 1
+    },
     {
       "id": "pancho",
       "name": "Pancho",
@@ -29,8 +29,8 @@
       "name": "Papas Fritas",
       "emoji": "🍟",
       "price": 100,
-      "stock": 1,
-      "carrito": 0
+      "stock": 0,
+      "carrito": 1
     },
     {
       "id": "ramen",
@@ -45,8 +45,8 @@
       "name": "Burrito",
       "emoji": "🌯",
       "price": 160,
-      "stock": 10,
-      "carrito": 0
+      "stock": 0,
+      "carrito": 10
     }
   ]
 }
