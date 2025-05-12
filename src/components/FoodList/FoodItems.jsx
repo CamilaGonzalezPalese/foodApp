@@ -30,7 +30,8 @@ function FoodItems({ food, setFoods }) {
 
   const themeClass = useTheme();
   return (
-    <div className={`food-item ${food.stock === 0 ? 'no-stock' : ''} ` + themeClass} >
+    <div>
+<div className={`food-item ${food.stock === 0 ? 'no-stock' : ''} ` + themeClass} >
       <figure>
         <span className="emoji">{food.emoji}</span>
         <Link className="food"  to={`${food.id}`}>
@@ -46,6 +47,8 @@ function FoodItems({ food, setFoods }) {
         Agregar
       </button>
       
+    </div>
+    
     </div>
     
   );

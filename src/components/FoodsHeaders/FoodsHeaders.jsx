@@ -1,6 +1,6 @@
-import './App.css';
-import FoodList from '../../components/FoodList/FoodList.jsx';
-import Checkout from '../../components/Checkout/Checkout.jsx';
+import './FoodsHeaders.css';
+import FoodList from '../FoodList/FoodList.jsx';
+import Checkout from '../Checkout/Checkout.jsx';
 import { ThemeContext } from '../../context/DarkContext.jsx';
 import { useEffect, useState, useContext } from 'react';
 
@@ -13,7 +13,7 @@ function Button({ children, onClick }) {
     </button>
   );
 }
-function App() {
+function FoodsHeaders() {
   const [foods, setFoods] = useState([]);
   const [loading, setLoading] = useState(true);
   const [theme, setTheme] = useState('light');
@@ -63,4 +63,4 @@ function App() {
   );
 }
 
-export default App;
+export default FoodsHeaders;
