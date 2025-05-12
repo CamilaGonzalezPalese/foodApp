@@ -34,7 +34,7 @@ function FoodItems({ food, setFoods }) {
 <div className={`food-item ${food.stock === 0 ? 'no-stock' : ''} ` + themeClass} >
       <figure>
         <span className="emoji">{food.emoji}</span>
-        <Link className="food"  to={`${food.id}`}>
+        <Link className="food"  to={`/products/${food.id}`}>
           Details
         </Link>
       </figure>
