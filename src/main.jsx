@@ -1,13 +1,19 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
+import { StrictMode, useState } from 'react'
+import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from "./components/App/App.jsx"
-import { BrowserRouter as Router } from "react-router-dom";
+import ProductDetailPage from "./components/ProductDetailPage.jsx"
+import ProductPage from "./components/ProductPage.jsx"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <Router>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  </Router>
-);
+createRoot(document.getElementById('root')).render(
+  <BrowserRouter>
+    <StrictMode>
+    <Routes>
+        <Route path="/" element={ <App /> } />
+        <Route path="/products" element={<ProductPage />} /> 
+        <Route path="/products/:productId" element={<ProductDetailPage />} />
+      </Routes>
+    </StrictMode>
+  </BrowserRouter>
+)

@@ -39,23 +39,27 @@ function App() {
   return (
     <>
       {!loading && !error ? (
-        <div className="App">
-          <ThemeContext.Provider value={theme}>
-            <header className="header">
+        <ThemeContext.Provider value={theme}>
+          <div className={"App " + theme}>
+          
+            <header className={"header " + theme}>
               <h1 className="title">Food app</h1>
             </header>
-            <main className="main-content">
+            <main className={"main-content " + theme}>
+
               <FoodList foods={foods} setFoods={setFoods} />
               <Checkout foods={foods} setFoods={setFoods} />
+
             </main>
-          </ThemeContext.Provider>
           <Button onClick={() => {
             setTheme(theme === 'dark' ? 'light' : 'dark');
             console.log(theme)
           }}>
             Toggle theme
           </Button>
-        </div>
+          
+          </div>
+        </ThemeContext.Provider>
       ) : (
         <p>Error: {error}</p>
       )}

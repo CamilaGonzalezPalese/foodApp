@@ -13,7 +13,8 @@
   display: flex;
   justify-content: space-between;
   align-items:flex-start;
-  margin-top: 5rem;
+  margin-top: 5px;
+  width: 100%;
 }
 .header {
   background-color: white;
@@ -22,7 +23,7 @@
   width: 100%;
   padding: 1rem;
   border-bottom: 2px solid #ccc;
-  position: fixed;
+  /* position: fixed; */
   top: 0;
   left: 0;
   height: 5rem;
@@ -44,7 +45,7 @@
   color: #fff;
 }
 
-.dark .food-item {
+/* .dark .food-item {
   background-color: #444;
   color: #fff;
 }
@@ -52,8 +53,10 @@
 .dark .checkout {
   background-color: #444;
   color: #fff;
-}
+} */
 .dark .food-item,
 .dark .checkout {
   border-color: #888;
+  background-color: #444;
+  color: #fff;
 }
