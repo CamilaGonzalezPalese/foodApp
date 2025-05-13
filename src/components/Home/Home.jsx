@@ -1,24 +1,16 @@
-import './FoodsHeaders.css';
+import './Home.css';
 import FoodList from '../FoodList/FoodList.jsx';
 import Checkout from '../Checkout/Checkout.jsx';
-import { ThemeContext } from '../../context/DarkContext.jsx';
 import { useEffect, useState, useContext } from 'react';
+import { useTheme } from '../../context/DarkContext.jsx';
 
-function Button({ children, onClick }) {
-  const theme = useContext(ThemeContext);
-  const className = 'button-' + theme;
-  return (
-    <button className={className} onClick={onClick}>
-      {children}
-    </button>
-  );
-}
-function FoodsHeaders() {
+function Home() {
   const [foods, setFoods] = useState([]);
   const [loading, setLoading] = useState(true);
   const [theme, setTheme] = useState('light');
   const [error, setError] = useState(null);
-
+  const { darkMode, toggleTheme } = useTheme();
+  const themeClass = darkMode ? 'dark' : 'light';
   const fetchFoods = async () => {
     try {
       const response = await fetch("http://localhost:3000/foods");
@@ -39,27 +31,14 @@ function FoodsHeaders() {
   return (
     <>
       {!loading && !error ? (
-        <ThemeContext.Provider value={theme}>
-          <div className={"App " + theme}>
-          
-            <header className={"header " + theme}>
-              <h1 className="title">Food app</h1>
-            </header>
-            <main className={"main-content " + theme}>
-
+          <div className={themeClass}>
+            <main className={"main-content " + themeClass}>
               <FoodList foods={foods} setFoods={setFoods} />
               <Checkout foods={foods} setFoods={setFoods} />
-
-            </main>
-          <Button onClick={() => {
-            setTheme(theme === 'dark' ? 'light' : 'dark');
-            console.log(theme)
-          }}>
-            Toggle theme
-          </Button>
-          
+            </main> 
+            
           </div>
-        </ThemeContext.Provider>
+          
       ) : (
         <p>Error: {error}</p>
       )}
@@ -67,4 +46,4 @@ function FoodsHeaders() {
   );
 }
 
-export default FoodsHeaders;
+export default Home;

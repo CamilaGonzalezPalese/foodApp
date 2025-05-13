@@ -38,7 +38,7 @@
   border-radius: 20%;
 }
 
-.food-stock.out {
+.food-stock .out {
   background-color: #f8d7da;
   color: #721c24;
 }

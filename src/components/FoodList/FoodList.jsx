@@ -5,7 +5,9 @@ import { useTheme } from '../../context/DarkContext.jsx';
 
 
 function FoodList({ foods, setFoods }) {
-  const themeClass = useTheme();
+
+  const { darkMode, toggleTheme } = useTheme();
+  const themeClass = darkMode ? 'dark' : 'light';
   return (
     <div className={'food-list ' + themeClass}>
       {foods.map((food) => (
