@@ -31,28 +31,22 @@ function FoodItems({ food, setFoods }) {
   }
 
   return (
-    <div className={themeClass}>
-      <div className={`food-item ${food.stock === 0 ? 'no-stock' : ''} ` + themeClass} >
+    <div className={"food-wrapper " + themeClass}>
+      <div onClick={handleClick} className={`food-item ${food.stock === 0 ? 'no-stock' : ''} ` + themeClass } >
         <figure>
           <span className="emoji">{food.emoji}</span>
-
         </figure>
 
         {food.stock === 0 && <p className="no-stock-text">No stock</p>}
-        <div className={`food-stock ${food.stock === 0 ? 'out' : ''}` + themeClass}>
+        <div className={`food-stock ${food.stock === 0 ? 'out' : ''}`}>
           {food.stock}
         </div>
-        <button onClick={handleClick}>
-          Agregar
-        </button>
-
       </div>
-      <Link className="food" to={`/products/${food.id}`}>
+      <Link className={"food-details-link"} to={`/products/${food.id}`}>
         Details
       </Link>
     </div>
-
-  );
+  ); 
 }
 
 export default FoodItems;

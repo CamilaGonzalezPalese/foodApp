@@ -46,7 +46,7 @@ function Checkout({ foods, setFoods }) {
       <div className={'checkout ' + themeClass}>
         <h2>Checkout</h2>
         <div>{listFoods}</div>
-        <h5 className={'total ' + themeClass}>Total: {sumCost}</h5>
+        <h5 className={'total' + themeClass}>Total: {sumCost}</h5>
       </div>
     </div>
   );

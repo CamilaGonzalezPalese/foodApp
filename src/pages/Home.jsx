@@ -1,13 +1,13 @@
+// Home.jsx
 import './Home.css';
-import FoodList from '../FoodList/FoodList.jsx';
-import Checkout from '../Checkout/Checkout.jsx';
+import FoodList from '../components/FoodList/FoodList.jsx';
+import Checkout from '../components/Checkout/Checkout.jsx';
 import { useEffect, useState, useContext } from 'react';
-import { useTheme } from '../../context/DarkContext.jsx';
+import { useTheme } from '../context/DarkContext.jsx';
 
 function Home() {
   const [foods, setFoods] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [theme, setTheme] = useState('light');
   const [error, setError] = useState(null);
   const { darkMode, toggleTheme } = useTheme();
   const themeClass = darkMode ? 'dark' : 'light';
@@ -29,21 +29,19 @@ function Home() {
   }, []);
 
   return (
-    <>
-      {!loading && !error ? (
-          <div className={themeClass}>
-            <main className={"main-content " + themeClass}>
-              <FoodList foods={foods} setFoods={setFoods} />
-              <Checkout foods={foods} setFoods={setFoods} />
-            </main> 
-            
-          </div>
-          
-      ) : (
-        <p>Error: {error}</p>
-      )}
-    </>
-  );
+  <>
+    {!loading && !error ? (
+      <>
+        <div className={"main-content " + themeClass}>
+          <FoodList foods={foods} setFoods={setFoods} />
+          <Checkout foods={foods} setFoods={setFoods} />
+        </div>
+      </>
+    ) : (
+      <p>Error: {error}</p>
+    )}
+  </>
+);
 }
 
 export default Home;

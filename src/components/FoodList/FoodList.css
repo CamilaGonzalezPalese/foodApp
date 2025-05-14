@@ -4,25 +4,19 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   padding: 1rem;
-  margin-top: 5px;
+  margin-top: 5rem;
   height: auto;
-  border-radius: 10px;
   border: 2px solid #333;
-  
+  border-radius: 10px;
 }
 
 .food-item {
-  position: relative;
-  background-color: white;
   position: relative;
   border: 2px solid #333;
   border-radius: 10px;
   padding: 1rem;
   min-height: 100px;
-  transition: transform 0.2s;
-
 }
-
 .food-stock {
   position: absolute;
   bottom: 0.5rem;
@@ -38,7 +32,7 @@
   border-radius: 20%;
 }
 
-.food-stock .out {
+.food-stock.out {
   background-color: #f8d7da;
   color: #721c24;
 }
@@ -56,4 +50,51 @@
 .emoji {
   font-size: 5rem;
   display: block;
+}
+
+.no-stock-text {
+  color: red;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.food-details-link {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.food-details-link:hover {
+  text-decoration: underline;
+}
+
+.food-item button {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.food-wrapper {
+  padding: 1rem;
+  transition: background-color 0.3s ease;
+  border: 2px solid #333;
+  border-radius: 15%;
+}
+
+.food-wrapper.light {
+  background-color: #f9f9f9;
+  color: #000;
+  border-color: #ccc;
+}
+
+.food-wrapper.dark {
+  background-color: #050708;
+  color: #fff;
+  border-color: #555;
 }

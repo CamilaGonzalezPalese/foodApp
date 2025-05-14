@@ -1,5 +1,5 @@
 //FoodList.jsx
-import FoodItems from './FoodItems';
+import FoodItems from './FoodItems.jsx';
 import './FoodList.css';
 import { useTheme } from '../../context/DarkContext.jsx';
 
