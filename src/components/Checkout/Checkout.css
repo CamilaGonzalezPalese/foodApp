@@ -18,3 +18,12 @@
   margin-right: 2rem;
   margin-top: 5px;
 }
+.checkout.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.checkout.dark {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}

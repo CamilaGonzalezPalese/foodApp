@@ -5,8 +5,8 @@
       "name": "Hamburguesa",
       "emoji": "🍔",
       "price": 100,
-      "stock": 0,
-      "carrito": 2
+      "stock": 1,
+      "carrito": 1
     },
     {
       "id": "taco",
@@ -45,8 +45,8 @@
       "name": "Burrito",
       "emoji": "🌯",
       "price": 160,
-      "stock": 7,
-      "carrito": 3
+      "stock": 5,
+      "carrito": 5
     }
   ]
 }

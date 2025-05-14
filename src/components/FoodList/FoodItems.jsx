@@ -4,6 +4,8 @@ import { useTheme } from '../../context/DarkContext.jsx';
 import { Link } from "react-router-dom";
 
 function FoodItems({ food, setFoods }) {
+  const { darkMode, toggleTheme } = useTheme();
+  const themeClass = darkMode ? 'dark' : 'light';
   async function handleClick() {
     if (food.stock > 0) {
       try {
@@ -28,27 +30,23 @@ function FoodItems({ food, setFoods }) {
     }
   }
 
-  const themeClass = useTheme();
   return (
-    <div className={`food-item ${food.stock === 0 ? 'no-stock' : ''} ` + themeClass} >
-      <figure>
-        <span className="emoji">{food.emoji}</span>
-        <Link className="food"  to={`/products/${food.id}`}>
-          Details
-        </Link>
-      </figure>
+    <div className={"food-wrapper " + themeClass}>
+      <div onClick={handleClick} className={`food-item ${food.stock === 0 ? 'no-stock' : ''} ` + themeClass } >
+        <figure>
+          <span className="emoji">{food.emoji}</span>
+        </figure>
 
-      {food.stock === 0 && <p className="no-stock-text">No stock</p>}
-      <div className={`food-stock ${food.stock === 0 ? 'out' : ''}`+ themeClass}>
-        {food.stock}
+        {food.stock === 0 && <p className="no-stock-text">No stock</p>}
+        <div className={`food-stock ${food.stock === 0 ? 'out' : ''}`}>
+          {food.stock}
+        </div>
       </div>
-      <button onClick={handleClick}>
-        Agregar
-      </button>
-      
+      <Link className={"food-details-link"} to={`/products/${food.id}`}>
+        Details
+      </Link>
     </div>
-    
-  );
+  ); 
 }
 
 export default FoodItems;

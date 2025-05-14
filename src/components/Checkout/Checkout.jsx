@@ -3,6 +3,8 @@ import './Checkout.css';
 import { useTheme } from '../../context/DarkContext.jsx';
 
 function Checkout({ foods, setFoods }) {
+  const { darkMode, toggleTheme } = useTheme();
+  const themeClass = darkMode ? 'dark' : 'light';
   async function handleClick(product) {
     if (product.carrito > 0) {
       try {
@@ -39,15 +41,12 @@ function Checkout({ foods, setFoods }) {
     (sum, item) => sum + item.price * item.carrito,
     0
   );
-
-  const themeClass = useTheme();
-
   return (
     <div>
       <div className={'checkout ' + themeClass}>
         <h2>Checkout</h2>
         <div>{listFoods}</div>
-        <h5 className={'total ' + themeClass}>Total: {sumCost}</h5>
+        <h5 className={'total' + themeClass}>Total: {sumCost}</h5>
       </div>
     </div>
   );

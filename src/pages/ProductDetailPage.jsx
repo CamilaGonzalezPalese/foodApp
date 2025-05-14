@@ -1,17 +1,12 @@
+// ProductDetailsPage.jsx
 import { useParams, useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
-
-const ProductDetailPage = () => {
-  // React router provides a useful hook which you can use to
-  // extract params 👇
+import { useEffect, useState, useContext } from "react";
+import { useTheme } from '../context/DarkContext.jsx';
+function ProductDetailPage(){
   const params = useParams();
-
-  // React router provides another useful hook which you can use
-  // to navigate programmatically 👇
   const navigate = useNavigate();
-
   const [product, setProduct] = useState(null);
-
+  
 /*    // We want to navigate to the home page after a short delay
   const navigateToHome = () => {
     setTimeout(() => {
@@ -35,27 +30,32 @@ const ProductDetailPage = () => {
     fetchProduct();
     /* navigateToHome(); */
   }, [params.productId, navigate]);
-
+  const { darkMode, toggleTheme } = useTheme();
+  const themeClass = darkMode ? 'dark' : 'light';
   // We want to render some loading state if the product is not yet loaded 👇
   if (!product) return <p>Loading product...</p>;
-
+  
   // We want to render the product details 👇
   return (
-    <div
+     <>
+     
+     
+    <div 
       style={{
         borderRadius: "15px",
         border: "solid black 4px",
         padding: "20px",
         margin: "20px",
       }}
-    >
-      <h1>Product details</h1>
+    className={themeClass}>
+      <h1 >Product details</h1>
       <span style={{ fontSize: "5rem" }}>{product.emoji}</span>
       <p>Description: {product.name}</p>
       <span>${product.price}</span>
       {/* <p>Product Code: {params.productId}</p> */}
     </div>
+     </>
   );
-};
+}
 
 export default ProductDetailPage;
