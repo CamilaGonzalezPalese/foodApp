@@ -1,8 +1,10 @@
 /*Checkout.css*/
 .total {
-  margin-top: auto;
-  padding-top: 1rem;
-  border-top: 1px solid #ccc;
+
+  border-top: 1px solid #151010;
+  width: 100%;
+  font-size: 1rem;
+  height: 100%;
 }
 
 .checkout {
@@ -10,14 +12,11 @@
   border: 2px solid #333;
   border-radius: 10px;
   width: 250px;
-  height: 420px;
-  display: flex;
-  flex-direction: column;
   height: 100%;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  margin-top: 5px;
+  flex-direction: column;
+  place-items: center;
 }
+
 .checkout.light {
   background-color: #ffffff;
   color: #000000;
@@ -26,4 +25,18 @@
 .checkout.dark {
   background-color: #1e1e1e;
   color: #ffffff;
+  
+}
+.total.dark {
+  border-top: 1px solid #555;
+  background-color: #3a3838;
+  border-color: #555;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.5rem;           /* Asegura que no haya padding */
+  margin: 0;            /* Asegura que no haya margen */
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box; /* Incluye el borde en el tamaño total */
+
 }

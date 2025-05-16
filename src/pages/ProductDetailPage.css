@@ -1,0 +1,27 @@
+.product-detail-container {
+    border-radius: 15px;
+    border: solid black 5px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;   
+    width: 100%;
+    max-height: 350px; 
+    place-items: center;
+}
+
+.main-content {
+  display: flex;
+  place-items: center; /* Centra horizontal y verticalmente */
+  min-height: 100vh;   /* Ocupa toda la altura de la ventana */
+  background-color: inherit;
+}
+.light, .product-detail-container.light {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.dark, .product-detail-container.dark {
+    background-color: #333;
+    color: #ffffff;
+}

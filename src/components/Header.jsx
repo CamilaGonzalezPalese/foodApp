@@ -17,7 +17,7 @@ const Header = () => {
 
     return (
         <header className={"header " + themeClass}>
-            <h1 className="title">Food app</h1>
+            <h1 className="title ">Food app</h1>
             <Button  onClick={toggleTheme} darkMode={darkMode}>
                 Toggle theme
             </Button>

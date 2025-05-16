@@ -10,7 +10,7 @@ function Home() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const { darkMode, toggleTheme } = useTheme();
-  const themeClass = darkMode ? 'dark' : 'light';
+  const themeClass = darkMode ? "dark-mode" : "light-mode";
   const fetchFoods = async () => {
     try {
       const response = await fetch("http://localhost:3000/foods");
